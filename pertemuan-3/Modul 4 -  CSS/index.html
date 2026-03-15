@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2311102148 - Muhammad Deka Maulana - PSIF-11-REG04</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Formulir Pendaftaran Praktikan</h2>
+        
+        <form action="#" method="POST">
+            
+            <div class="form-group">
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" name="nama" class="form-control" value="Nama Anda" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nim">NIM</label>
+                <input type="text" id="nim" name="nim" class="form-control" value="NIM Anda" required>
+            </div>
+
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Masukkan username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="••••••••" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="contoh@email.com" required>
+            </div>
+
+            <div class="form-group">
+                <label>Jenis Kelamin</label>
+                <div class="radio-group">
+                    <label class="radio-item">
+                        <input type="radio" name="jenis_kelamin" value="Pria"> Pria
+                    </label>
+                    <label class="radio-item">
+                        <input type="radio" name="jenis_kelamin" value="Wanita" checked> Wanita
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Hobi</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="hobi" value="Renang" checked> Renang
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="hobi" value="Bersepeda"> Bersepeda
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="hobi" value="Memancing" checked> Memancing
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="pendidikan">Jenjang Pendidikan</label>
+                <select id="pendidikan" name="pendidikan" class="form-control">
+                    <option value="" disabled selected>------Pilih------</option>
+                    <option value="Tamat D3">Tamat D3</option>
+                    <option value="Tamat S1">Tamat S1</option>
+                    <option value="Tamat S2">Tamat S2</option>
+                    <option value="Tamat S3">Tamat S3</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="kritik">Kritik & Saran</label>
+                <textarea id="kritik" name="kritik" class="form-control" placeholder="Tuliskan kritik dan saran Anda di sini..."></textarea>
+            </div>
+
+            <div class="button-group">
+                <button type="reset" class="btn btn-cancel">Cancel</button>
+                <button type="submit" class="btn btn-submit">Submit</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
