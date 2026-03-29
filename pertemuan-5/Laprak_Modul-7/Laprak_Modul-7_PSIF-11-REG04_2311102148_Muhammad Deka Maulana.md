@@ -1,7 +1,7 @@
 <div align="center">
-   <h2>LAPORAN PRAKTIKUM<br>PEMROGRAMAN WEB (COTS 1)</h2>
+   <h2>LAPORAN PRAKTIKUM<br>APLIKASI BERBASIS PLATFORM</h2>
    <br>
-   <h4>TUGAS COTS<br>IMPLEMENTASI CRUD DATA MAHASISWA (LARAVEL & AJAX)</h4>
+   <h4>TUGAS 4<br>WEB FRAMEWORK 1</h4>
    <br>
    <img src="../assets/logotelu.png" alt="Logo Telkom" width="200">
    <br><br>
@@ -98,3 +98,9 @@ class MahasiswaController extends Controller
         return response()->json(['success' => true, 'message' => 'Data berhasil dihapus']);
     }
 }
+```
+
+## 3. Screenshot Output
+
+*Tampilan Dashboard*
+![Gambar Hasil Output 8](../assets/dashboard.png)
