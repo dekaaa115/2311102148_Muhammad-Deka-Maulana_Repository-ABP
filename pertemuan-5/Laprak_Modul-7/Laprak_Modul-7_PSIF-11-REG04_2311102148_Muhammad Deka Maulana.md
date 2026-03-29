@@ -41,7 +41,7 @@ Laravel adalah *framework* aplikasi web berbasis PHP dengan arsitektur MVC (Mode
 
 ## 2. Kode Program & Implementasi
 
-*Tugas COTS 1 - Arsitektur Web & Framework*
+*Tugas 4 - Web Framework 1*
 
 **Ketentuan Tugas:**
 1. Menggunakan Framework Bootstrap.
