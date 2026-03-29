@@ -1,4 +1,4 @@
-<div style="text-align: center;">
+<div align="center">
    <h2>LAPORAN PRAKTIKUM<br>APLIKASI BERBASIS PLATFORM</h2>
    <br>
    <h4>TUGAS 4<br>WEB FRAMEWORK 1</h4>
