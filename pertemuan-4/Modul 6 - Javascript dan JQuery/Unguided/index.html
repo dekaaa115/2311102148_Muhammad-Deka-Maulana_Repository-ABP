@@ -1,0 +1,145 @@
+<!-- Muhammad Deka Maulana - PSIF-11-REG04 - 2311102148 -->
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Spesial Ramadan - Bagi-bagi THR</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('../assets/bg-idulfitri.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h5 { 
+            color: #b08d55; 
+            letter-spacing: 2px; 
+            font-weight: 600; 
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        
+        h1 { 
+            font-weight: 700; 
+            font-size: 2.5rem; 
+            margin-bottom: 15px; 
+            color: #6b4d24; 
+        }
+        
+        p.subtitle { 
+            font-weight: 500; 
+            font-size: 1.1rem; 
+            color: #8c7255; 
+            margin-bottom: 30px; 
+        }
+
+        .btn-thr {
+            background: linear-gradient(45deg, #cba153, #a27c3a);
+            border: none;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.2rem;
+            padding: 12px 40px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(203, 161, 83, 0.4);
+        }
+
+        .btn-thr:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(203, 161, 83, 0.6);
+            color: #fff;
+        }
+
+        .btn-thr:active { 
+            transform: translateY(0); 
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glass-card">
+        <h5>HARI RAYA IDUL FITRI 1447 H</h5>
+        <h1>Selamat Hari Raya Idul Fitri</h1>
+        <p class="subtitle">Mohon Maaf Lahir dan Batin</p>
+        
+        <button class="btn btn-thr" onclick="ambilTHR()">
+            Ambil THR
+        </button>
+    </div>
+
+    <script>
+        function ambilTHR() {
+            confetti({
+                particleCount: 150,
+                spread: 80,
+                origin: { y: 0.6 },
+                colors: ['#cba153', '#a27c3a', '#e9ecef', '#ffffff']
+            });
+
+            const nominalTHR = [50000, 100000, 250000, 500000, 1000000];
+            const randomTHR = nominalTHR[Math.floor(Math.random() * nominalTHR.length)];
+            
+            const formatRupiah = new Intl.NumberFormat('id-ID', {
+                style: 'currency',
+                currency: 'IDR',
+                minimumFractionDigits: 0
+            }).format(randomTHR);
+
+            setTimeout(() => {
+                Swal.fire({
+                    title: 'SELAMAT!',
+                    html: `<span style="font-size: 18px; color: #8c7255;">Anda mendapatkan THR sebesar:</span> <br><br><strong style="font-size: 38px; color: #1b6c43;">${formatRupiah}</strong>`,
+                    background: '#fcfcfc',
+                    color: '#6b4d24',
+                    confirmButtonText: 'Terima Kasih',
+                    confirmButtonColor: '#cba153',
+                    showClass: {
+                        popup: 'animate__animated animate__zoomIn'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__zoomOut'
+                    }
+                });
+            }, 500);
+        }
+    </script>
+
+</body>
+</html>
