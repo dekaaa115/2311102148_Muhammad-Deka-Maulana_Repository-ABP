@@ -1,4 +1,4 @@
-<div align="center">
+<div style="text-align: center;">
    <h2>LAPORAN PRAKTIKUM<br>APLIKASI BERBASIS PLATFORM</h2>
    <br>
    <h4>TUGAS 4<br>WEB FRAMEWORK 1</h4>
@@ -102,5 +102,18 @@ class MahasiswaController extends Controller
 
 ## 3. Screenshot Output
 
-*Tampilan Dashboard*
+### *Dashboard*
 ![Gambar Hasil Output 8](../assets/dashboard.png)
+
+### *Tambah Data*
+![Gambar Hasil Output 8](../assets/create.png)
+
+### *Edit Data*
+![Gambar Hasil Output 8](../assets/edit.png)
+
+### *Hapus Data*
+![Gambar Hasil Output 8](../assets/verif-delete.png)
+![Gambar Hasil Output 8](../assets/succes-delete.png)
+
+### *Search Data*
+![Gambar Hasil Output 8](../assets/search.png)
