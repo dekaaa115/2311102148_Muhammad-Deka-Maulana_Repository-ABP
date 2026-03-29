@@ -102,5 +102,15 @@ class MahasiswaController extends Controller
 
 ## 3. Screenshot Output
 
-*Tampilan Dashboard*
+### *Dashboard*
 ![Gambar Hasil Output 8](../assets/dashboard.png)
+
+### *Tambah Data*
+![Gambar Hasil Output 8](../assets/create.png)
+
+### *Edit Data*
+![Gambar Hasil Output 8](../assets/edit.png)
+
+### *Hapus Data*
+![Gambar Hasil Output 8](../assets/verif-delete.png)
+![Gambar Hasil Output 8](../assets/succes-delete.png)
