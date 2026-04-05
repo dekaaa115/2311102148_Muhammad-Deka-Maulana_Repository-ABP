@@ -1,6 +1,3 @@
-Berikut adalah format mentah untuk file `README.md`. Kamu bisa langsung menyalin (copy) seluruh kode di bawah ini dan menempelkannya (paste) ke dalam file `README.md` di repositori GitHub milikmu.
-
-````markdown
 <div align="center">
   <br />
   <h1>LAPORAN PRAKTIKUM<br>APLIKASI BERBASIS PLATFORM</h1>
@@ -343,6 +340,3 @@ Aplikasi web sederhana ini berhasil dibangun menggunakan *runtime* Node.js denga
 ## Link Video Rekaman Presentasi
 
 [Masukkan Link Google Drive Video Anda Di Sini]
-
-```
-```
