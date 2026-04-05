@@ -335,7 +335,7 @@ Aplikasi web sederhana ini berhasil dibangun menggunakan *runtime* Node.js denga
 
 ## Link PPT Presentasi
 
-[Masukkan Link Google Drive PPT Anda Di Sini]
+https://drive.google.com/drive/folders/1PnPKE7WP3j4JBfVMFI1R9KLa1TH7ZVlT?usp=sharing
 
 ## Link Video Rekaman Presentasi
 
