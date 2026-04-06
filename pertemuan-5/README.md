@@ -309,34 +309,41 @@ app.listen(3000, () => {
 </html>
 ```
 
-## 4\. Penjelasan Cara Kerja Aplikasi
+## 4\. Penjelasan Cara Kerja Aplikasi & Screenshot Output
 
-Berikut merupakan cara kerja aplikasi berdasarkan masing-masing operasi CRUD (Create, Read, Update, Delete) :
+Berikut merupakan cara kerja aplikasi dan screenshot output berdasarkan masing-masing operasi CRUD (Create, Read, Update, Delete) :
 
 ### Operasi Read
 
 Pada operasi Read (menampilkan data), proses terjadi ketika pengguna membuka halaman `/data`. Di halaman ini, tabel diinisialisasi menggunakan jQuery DataTables. DataTables secara otomatis mengirimkan *request* AJAX ke *endpoint* API `/api/mahasiswa`. *Endpoint* ini ditangani oleh backend Express.js, yang menjalankan perintah query `SELECT * FROM mahasiswa` ke dalam database SQLite. Hasil dari query tersebut kemudian dikembalikan dalam format JSON. Frontend DataTables menangkap JSON ini dan merendernya ke dalam kolom tabel yang telah dikonfigurasi, lengkap dengan fitur pencarian dan paginasi otomatis.
+![OPERASI READ](/pertemuan-5/Coding-On-The-Spot/assets/read.png)
 
 ### Operasi Create
 
 Operasi Create (penambahan data) diawali saat pengguna menekan tombol "Tambah Data" atau menavigasi ke halaman `/form`. Halaman form dirender menggunakan templating EJS. Ketika pengguna mengisi data Nama, NIM, dan Jurusan lalu menekan tombol Simpan, aplikasi akan mengirimkan HTTP POST request menuju *endpoint* `/api/mahasiswa`. Data dari formulir (*body request*) ditangkap oleh Express.js, lalu dieksekusi menggunakan perintah `INSERT INTO` ke tabel SQLite. Setelah data berhasil tersimpan, *server* secara otomatis akan melakukan *redirect* (mengarahkan kembali) pengguna ke halaman tabel `/data` untuk melihat data yang baru saja ditambahkan.
+![OPERASI CREATE](/pertemuan-5/Coding-On-The-Spot/assets/form_create.png)
+![OPERASI CREATE](/pertemuan-5/Coding-On-The-Spot/assets/after_create.png)
 
 ### Operasi Update
 
 Operasi Update (mengubah data) dimulai saat pengguna menekan tombol "Edit" pada salah satu baris data di halaman tabel. Tombol ini mengarahkan pengguna ke *endpoint* GET `/form/:id`. Server Express.js menangkap ID tersebut, mencari data spesifik melalui query `SELECT` dari SQLite, lalu merender file `form.ejs` sambil menginjeksi (pre-populating) data lama ke dalam *input field*. Setelah pengguna memodifikasi data dan menekan simpan, sistem melakukan HTTP POST ke `/api/mahasiswa/:id`. Backend menangkap perubahan ini dan menjalankan query `UPDATE mahasiswa SET... WHERE id = ?`. Jika berhasil, pengguna akan langsung dialihkan kembali ke halaman Data Tabel.
+![OPERASI UPDATE](/pertemuan-5/Coding-On-The-Spot/assets/form_update.png)
+![OPERASI UPDATE](/pertemuan-5/Coding-On-The-Spot/assets/after_update.png)
 
 ### Operasi Delete
 
 Operasi Delete (menghapus data) dilakukan melalui tabel interaktif. Pada kolom Aksi di DataTables, terdapat tombol "Delete" yang dikonfigurasi memiliki rute tautan `/api/mahasiswa/delete/:id`. Saat ditekan, peramban akan memunculkan pesan peringatan JavaScript *native* `confirm()` untuk mencegah penghapusan yang tidak disengaja. Jika pengguna menyetujui, *request* GET dikirimkan ke *endpoint* tersebut. *Server* Express.js mengeksekusi perintah SQL `DELETE FROM mahasiswa WHERE id = ?`. Seketika setelah data berhasil dihapus secara permanen dari SQLite, halaman akan langsung kembali me-*redirect* ke `/data`.
+![OPERASI DELETE](/pertemuan-5/Coding-On-The-Spot/assets/popup_delete.png)
+![OPERASI DELETE](/pertemuan-5/Coding-On-The-Spot/assets/after_delete.png)
+
+### Operasi Search
+Fitur pencarian di DataTables memungkinkan pengguna untuk mencari data secara real-time. Saat pengguna mengetikkan kata kunci di kotak pencarian, DataTables secara otomatis mengirimkan permintaan AJAX ke *endpoint* `/api/mahasiswa` dengan parameter pencarian yang sesuai. Backend Express.js menangani permintaan ini dengan menjalankan query SQL yang memfilter data berdasarkan kata kunci yang dimasukkan. Hasilnya dikembalikan dalam format JSON, dan DataTables memperbarui tampilan tabel secara dinamis untuk menampilkan hanya data yang cocok dengan kriteria pencarian.
+![OPERASI SEARCH](/pertemuan-5/Coding-On-The-Spot/assets/search.png)
 
 ## Kesimpulan
 
 Aplikasi web sederhana ini berhasil dibangun menggunakan *runtime* Node.js dengan kerangka kerja Express.js untuk sisi *backend* dan SQLite sebagai basis data yang ringan. Implementasi konsep CRUD (Create, Read, Update, Delete) berjalan dengan lancar dan selaras melalui arsitektur perutean *endpoint* API. Pada sisi *frontend*, penggunaan framework Bootstrap memastikan tata letak yang bersih dan responsif, sementara perpaduan jQuery dan DataTables memungkinkan pengelolaan serta visualisasi data secara interaktif dan dinamis menggunakan format pertukaran data JSON.
 
-## Link PPT Presentasi
+## Link PPT & Video Presentasi
 
 https://drive.google.com/drive/folders/1PnPKE7WP3j4JBfVMFI1R9KLa1TH7ZVlT?usp=sharing
-
-## Link Video Rekaman Presentasi
-
-[Masukkan Link Google Drive Video Anda Di Sini]
