@@ -327,8 +327,8 @@ Operasi Create (penambahan data) diawali saat pengguna menekan tombol "Tambah Da
 ### Operasi Update
 
 Operasi Update (mengubah data) dimulai saat pengguna menekan tombol "Edit" pada salah satu baris data di halaman tabel. Tombol ini mengarahkan pengguna ke *endpoint* GET `/form/:id`. Server Express.js menangkap ID tersebut, mencari data spesifik melalui query `SELECT` dari SQLite, lalu merender file `form.ejs` sambil menginjeksi (pre-populating) data lama ke dalam *input field*. Setelah pengguna memodifikasi data dan menekan simpan, sistem melakukan HTTP POST ke `/api/mahasiswa/:id`. Backend menangkap perubahan ini dan menjalankan query `UPDATE mahasiswa SET... WHERE id = ?`. Jika berhasil, pengguna akan langsung dialihkan kembali ke halaman Data Tabel.
-![OPERASI UPDATE](/pertemuan-5/Coding-On-The-Spot/assets/form_update.png)
-![OPERASI UPDATE](/pertemuan-5/Coding-On-The-Spot/assets/after_update.png)
+![OPERASI UPDATE](/pertemuan-5/Coding-On-The-Spot/assets/form_edit.png)
+![OPERASI UPDATE](/pertemuan-5/Coding-On-The-Spot/assets/after_edit.png)
 
 ### Operasi Delete
 
