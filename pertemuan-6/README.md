@@ -235,7 +235,7 @@ Berikut merupakan penjelasan alur kerja aplikasi saat melakukan proses fetching 
 Saat pengguna mengakses rute URL utama (/), router Laravel mengarahkan permintaan tersebut ke fungsi index() pada MahasiswaController. Fungsi ini kemudian memanggil mesin template Blade untuk merender berkas welcome.blade.php. Pada tahap ini, interaksi klien dengan basis data atau file lokal belum terjadi. Halaman hanya menampilkan antarmuka statis (header) dan sebuah tombol pemicu (trigger) yang disiapkan untuk menjalankan skrip JavaScript (Event Listener).
 ![Tampilan Awal](https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/blob/70c07532598b04a2259ca7b6d5b2fe4abbaefce6/pertemuan-6/output%20tugas-laravel-ajax/tampilan-awal.png)
 
-####Proses Asinkron (Pengambilan & Render Data)
+#### Proses Asinkron (Pengambilan & Render Data)
 Proses utama terjadi saat pengguna menekan tombol "Tampilkan Data". Event Listener pada JavaScript terpicu dan menjalankan fungsi Fetch API menuju endpoint /api/mahasiswa.
 ![Tampilkan Data](https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/blob/70c07532598b04a2259ca7b6d5b2fe4abbaefce6/pertemuan-6/output%20tugas-laravel-ajax/tampilkan-data.png)
 
