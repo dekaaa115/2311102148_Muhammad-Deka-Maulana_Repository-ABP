@@ -391,177 +391,121 @@ class CustomTile extends StatelessWidget {
 
 ![Screenshot Output 3](https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/blob/c8ddc42c71ead2c73d692a1295b29a0ace3c32d0/pertemuan-9/Screenshot_Output/3.png)
 
-### Penjelasan Setiap Widget
+### Pembahasan Fungsionalitas Setiap Widget
 
-#### 1. Container
-Container merupakan widget dasar pada Flutter yang berfungsi sebagai wadah atau kotak pembungkus untuk menampilkan dan mengatur widget lain di dalamnya. Widget ini dapat dikustomisasi mulai dari ukuran, warna, margin, padding, hingga dekorasi visual seperti gradasi warna, sudut melengkung, dan bayangan. Pada kode main.dart, widget Container digunakan sebagai kartu profil sederhana dengan tampilan modern dan menarik.
+#### 1. Widget Container
 
-Berikut penjelasan Widget Container yang digunakan pada main.dart : 
+Di dalam ekosistem Flutter, `Container` bertindak sebagai elemen fundamental yang bertugas membungkus dan mengatur tata letak *widget* lain di dalamnya. Komponen ini menawarkan tingkat kustomisasi yang tinggi, mencakup pengaturan dimensi (panjang dan lebar), warna latar, spasi luar (*margin*), spasi dalam (*padding*), hingga ornamen visual seperti gradien, modifikasi kelengkungan sudut, serta efek bayangan. Pada kode `main.dart` ini, `Container` dirancang untuk membentuk sebuah kartu profil minimalis bernuansa modern.
 
-1. Dimensi Container
-<br>Container memiliki tinggi (height) sebesar 180 pixel dan lebar (width) menggunakan double.infinity, sehingga lebar container akan menyesuaikan dan memenuhi area layar yang tersedia secara horizontal.
+Rincian implementasinya meliputi:
 
-2. Dekorasi Container (decoration: BoxDecoration)
-<br>Tampilan visual container diatur menggunakan BoxDecoration, yang terdiri dari beberapa elemen berikut :
-    - Gradasi Warna (LinearGradient); Background container menggunakan efek gradasi warna melalui LinearGradient, yaitu perpaduan warna dari biru tua (Colors.indigo) menuju biru muda (Colors.lightBlue). Efek ini membuat tampilan container terlihat lebih modern dan tidak monoton.
-    - Sudut Melengkung (borderRadius); Properti borderRadius: BorderRadius.circular(24) digunakan untuk membuat sudut container menjadi melengkung dengan radius sebesar 24 pixel. Hal ini memberikan kesan lebih halus dan elegan dibandingkan sudut kotak biasa.
-    - Efek Bayangan (boxShadow); Container juga diberikan efek bayangan menggunakan BoxShadow. Bayangan berwarna Colors.indigo dengan tingkat blur (blurRadius) sebesar 12 dan posisi bayangan sedikit bergeser ke bawah menggunakan offset: Offset(0, 6). Efek ini membuat container terlihat lebih hidup dan memiliki dimensi seperti kartu (card).
+* **Pengaturan Dimensi:** `Container` dipatok dengan ukuran tinggi tetap 180 piksel, sedangkan sisi lebarnya menggunakan atribut `double.infinity` agar dapat membentang secara maksimal menyesuaikan lebar perangkat secara horizontal.
+* **Desain Visual (BoxDecoration):** Aspek estetika dari latar belakang komponen ini dikelola menggunakan kelas `BoxDecoration`, yang memuat:
+* **Warna Gradien:** Menggunakan `LinearGradient` untuk menciptakan transisi visual yang mulus dari warna biru pekat (`Colors.indigo`) menuju warna biru cerah (`Colors.lightBlue`).
+* **Sudut Melengkung:** Properti `borderRadius: BorderRadius.circular(24)` ditambahkan guna mengubah sudut kaku pada kotak menjadi tumpul dengan radius 24 piksel.
+* **Efek Timbul (Shadow):** Diaktifkannya efek bayangan dari `BoxShadow` dengan warna `Colors.indigo`, nilai *blur* 12 piksel, serta koordinat kemiringan `Offset(0, 6)` memberikan ilusi bahwa kartu tersebut sedikit melayang dari latar belakang.
 
-3. Isi Container (child)
-<br>Seluruh isi container dibungkus menggunakan widget Center, sehingga seluruh komponen di dalamnya berada tepat di tengah container, baik secara horizontal maupun vertikal.
 
-4. Pengaturan Layout Menggunakan Column
-<br>Di dalam Center, digunakan widget Column dengan properti mainAxisAlignment: MainAxisAlignment.center. Pengaturan ini membuat seluruh elemen tersusun secara vertikal dari atas ke bawah dan posisinya tetap berada di tengah container.
+* **Posisi Elemen di Dalamnya:** Bagian `child` dari Container diapit oleh *widget* `Center`. Tujuannya adalah memastikan semua isi konten secara presisi jatuh di poros tengah (*center*).
+* **Konfigurasi Susunan Vertikal:** Pada area *Center*, dimasukkan `Column` dengan pengaturan `mainAxisAlignment: MainAxisAlignment.center`. Ini menjamin susunan ikon, nama, dan NIM berjajar lurus ke bawah dan mengunci posisinya di bagian tengah area komponen.
+* **Rincian Konten:**
+* **Ikon Visual:** Menampilkan gambar perangkat keras PC (`Icons.computer`) yang diubah warnanya menjadi putih solid dengan dimensi 38.
+* **Pemberi Spasi (SizedBox):** Digunakan untuk menciptakan celah bernilai 8 dan 4 piksel sebagai pembatas area agar antarteks maupun ikon tidak terlihat tumpang tindih.
+* **Label Nama:** Menyajikan teks "Muhammad Deka Maulana" berpemformatan rata tengah, berwarna putih solid, ukuran *font* 19, dan diberi ketebalan ekstra melalui `fontWeight.bold`.
+* **Label Identitas (NIM):** Menyajikan rangkaian angka "2311102148" berukuran 15 piksel menggunakan pewarnaan putih dengan tingkat transparansi 70% (`Colors.white70`), membedakannya dari label utama.
 
-5. Komponen yang Ditampilkan
-<br>Beberapa widget yang terdapat di dalam Column antara lain :
-    - Icon; Widget Icon(Icons.computer) digunakan untuk menampilkan ikon komputer dengan warna putih (Colors.white) dan ukuran (size) sebesar 38.
-    - SizedBox; Widget SizedBox(height: 8) dan SizedBox(height: 4) digunakan sebagai pemberi jarak antar elemen agar tampilan tidak terlalu rapat dan terlihat lebih rapi.
-    - Text Nama; Widget Text pertama digunakan untuk menampilkan nama "Muhammad Deka Maulana". Teks ditampilkan rata tengah (textAlign: TextAlign.center), berwarna putih, memiliki ukuran font 19, serta menggunakan fontWeight.bold agar terlihat lebih tegas dan menonjol.
-    - Text NIM; Widget Text kedua digunakan untuk menampilkan NIM "2311102148" dengan ukuran font 15 dan warna Colors.white70, sehingga tampil sedikit lebih transparan dibandingkan teks nama.
 
-#### 2. GridView
-GridView merupakan widget pada Flutter yang digunakan untuk menampilkan data dalam bentuk grid atau kisi-kisi (baris dan kolom). Widget ini sangat cocok digunakan untuk menampilkan menu layanan, kategori, galeri foto, maupun daftar produk. Pada kode main.dart, digunakan GridView.builder karena lebih efisien dalam me-render data secara dinamis dari sebuah list atau array (gridItems).
 
-Berikut penjelasan Widget GridView yang digunakan pada main.dart : 
+#### 2. Widget GridView
 
-1. Pengaturan Scroll GridView
-<br>Karena GridView diletakkan di dalam widget yang sudah memiliki scroll utama, maka diperlukan beberapa pengaturan agar tidak terjadi konflik scroll.
-    - shrinkWrap: true; Properti ini digunakan agar tinggi GridView menyesuaikan jumlah item yang ada di dalamnya. Tanpa properti ini, GridView bisa mengalami error karena mencoba mengambil tinggi tak terbatas.
-    - physics: NeverScrollableScrollPhysics(); Digunakan untuk menonaktifkan scroll bawaan dari GridView. Dengan begitu, proses scroll hanya dikendalikan oleh scroll utama halaman sehingga lebih stabil dan tidak terjadi bentrok antar scroll.
+`GridView` merupakan jenis komponen antarmuka yang dirancang khusus untuk memetakan serangkaian data dalam formasi kotak-kotak matriks (baris bersilangan dengan kolom). Format ini sangat cocok dimanfaatkan untuk menata menu, katalog produk, atau galeri visual. Pada proyek ini, implementasinya menggunakan metode `GridView.builder` karena algoritma pemrosesannya lebih ramah memori saat merender urutan data dari *array* secara dinamis.
 
-2. Pengaturan Tata Letak Grid (gridDelegate)
-<br>Layout grid diatur menggunakan SliverGridDelegateWithFixedCrossAxisCount, yang berfungsi menentukan jumlah kolom dan jarak antar item.
-    - crossAxisCount: 2; Membagi tampilan grid menjadi 2 kolom dalam satu baris
-    - crossAxisSpacing: 14; Memberikan jarak horizontal antar kotak grid sebesar 14 pixel
-    - mainAxisSpacing: 14; Memberikan jarak vertikal antar kotak grid sebesar 14 pixel sehingga tampilan lebih rapi dan tidak terlalu rapat
-    - childAspectRatio: 1.1; Mengatur perbandingan lebar dan tinggi item grid. Nilai 1.1 membuat ukuran kotak sedikit lebih lebar dibandingkan tingginya
+Rincian implementasinya meliputi:
 
-3. Pembuatan Item Secara Dinamis (itemBuilder)
-<br>Widget itemBuilder digunakan untuk membuat isi grid secara otomatis berdasarkan jumlah data pada gridItems.
-    - itemCount: gridItems.length; Menentukan jumlah item yang akan ditampilkan sesuai panjang data pada array gridItems
-    - final item = gridItems[index]; Pada setiap perulangan, variabel item akan mengambil data tertentu dari array berdasarkan index saat ini, seperti warna, icon, dan judul layanan
+* **Pengendalian Sifat Scroll:** Oleh karena komponen letaknya tumpang tindih dengan fasilitas *scroll* dari layar utama, beberapa batasan harus diterapkan:
+* `shrinkWrap: true`: Atribut ini krusial untuk memaksa grid menciut dan membatasi ketinggiannya sesuai dengan jumlah ruang dari objek yang dirender, menghindari terjadinya *error layout*.
+* `physics: NeverScrollableScrollPhysics()`: Digunakan untuk membekukan fungsi gulir bawaan dari `GridView`, sehingga keseluruhan layar hanya merespons satu sistem *scroll* dari halaman induk.
 
-4. Desain Item Grid Menggunakan Container
-<br>Setiap item grid dibungkus menggunakan widget Container yang diberikan dekorasi visual agar tampil lebih menarik.
-    - Background Warna Dinamis; Properti color: item['color'] membuat setiap kotak memiliki warna berbeda sesuai data pada array
-    - Sudut Melengkung (borderRadius); Menggunakan BorderRadius.circular(22) agar sudut kotak terlihat lebih halus dan modern.
-    - Efek Bayangan (boxShadow); Setiap kotak memiliki efek bayangan dengan warna yang mengikuti warna utama kotak (item['color'].withOpacity(0.35)), sehingga tampilan terlihat lebih hidup dan memiliki dimensi.
 
-5. Isi Item Grid (child)
-<br>Di dalam Container, digunakan widget Column dengan mainAxisAlignment: MainAxisAlignment.center agar seluruh isi berada tepat di tengah kotak secara vertikal. Komponen yang ditampilkan antara lain:
-    - Icon; Widget Icon digunakan untuk menampilkan ikon layanan berdasarkan data item['icon']. Ikon berwarna putih dengan ukuran 42 agar terlihat jelas dan dominan.
-    - SizedBox; SizedBox(height: 10) digunakan sebagai jarak antara icon dan text agar tampilan tidak terlalu rapat.
-    - Text judul layanan; Widget Text digunakan untuk menampilkan nama layanan dari item['title']. Teks berwarna putih, memiliki ukuran font 18, dan menggunakan fontWeight.bold agar lebih mudah dibaca.
+* **Alokasi Tata Letak (gridDelegate):** Modul kelas `SliverGridDelegateWithFixedCrossAxisCount` mengatur pembagian area grid:
+* `crossAxisCount: 2`: Menetapkan jumlah ruang kolom menjadi 2 bagian sejajar.
+* `crossAxisSpacing` dan `mainAxisSpacing`: Memberikan spasi seragam sebesar 14 piksel pada celah vertikal maupun mendatar tiap kotak agar tidak melekat satu sama lain.
+* `childAspectRatio: 1.1`: Menentukan proporsi perbandingan ukuran sisi-sisinya. Angka 1.1 membuat bingkai sedikit lebih lebar daripada tingginya.
 
-#### 3. ListView
-ListView merupakan widget pada Flutter yang digunakan untuk menampilkan kumpulan widget dalam bentuk daftar secara vertikal maupun horizontal yang dapat di-scroll. Widget ini sangat sering digunakan untuk menampilkan data seperti daftar menu, notifikasi, chat, maupun status proses tertentu. Pada kode main.dart, ListView digunakan untuk menampilkan daftar tahapan status perbaikan perangkat yang disusun secara vertikal.
 
-Berikut penjelasan Widget ListView yang digunakan pada main.dart : 
+* **Proses Pembuatan Elemen Dinamis (itemBuilder):** Parameter ini yang memproduksi susunan menu satu per satu secara kontinu:
+* `itemCount`: Berfungsi menakar total perulangan, angkanya disesuaikan berdasarkan ukuran *array* bawaan `gridItems.length`.
+* `item`: Pada setiap fase putaran *looping*, variabel ini akan mengekstrak susunan data warna, rujukan *icon*, serta teks judul dari struktur array sesuai nomor antreannya.
 
-1. Pembatas Tinggi Menggunakan SizedBox
-<br>Widget ListView dibungkus menggunakan SizedBox dengan properti height: 180. Penggunaan SizedBox ini bertujuan untuk memberikan batas tinggi yang pasti pada area ListView. Hal ini penting karena ListView memiliki sifat scrollable, sehingga jika ditempatkan di dalam widget vertikal seperti Column, maka perlu diberikan batas ukuran agar tidak terjadi error layout. Dengan tinggi sebesar 180 pixel, area list akan tetap rapi dan bisa di-scroll apabila jumlah item melebihi ukuran tersebut.
 
-2. Penggunaan Widget ListView
-<br>ListView pada kode ini digunakan dalam bentuk standar menggunakan properti children. Karena jumlah data sedikit dan bersifat statis (tidak berubah-ubah), maka penggunaan children lebih sederhana dibandingkan menggunakan ListView.builder. Seluruh item list dituliskan langsung di dalam children tanpa perlu melakukan looping atau pengambilan data secara dinamis.
+* **Pewarnaan dan Modifikasi Kartu (Container):** *Widget* bertindak sebagai cangkang pelindung dari susunan menu:
+* *Background* setiap kotak diekstrak otomatis berdasarkan rekaman data struktur warnanya (`item['color']`).
+* Tepian luar dikurasi menggunakan `BorderRadius.circular(22)`.
+* Menambahkan `boxShadow` dengan pewarnaan yang sama persis dengan kartu utamanya namun berlevel opasitas 35%, serta memberikan *offset* (0, 5) guna memunculkan kesan 3D.
 
-3. Isi Daftar (children)
-<br>Di dalam ListView, terdapat beberapa item status perbaikan yang ditampilkan menggunakan widget custom bernama CustomTile. Item yang ditampilkan antara lain :
-    - CustomTile('Pengecekan Masalah', Icons.search); Menampilkan status pengecekan awal perangkat dengan ikon pencarian (Icons.search).
-    - CustomTile('Sedang Diperbaiki', Icons.build_circle); Menampilkan status perangkat yang sedang dalam proses perbaikan dengan ikon tools/perbaikan (Icons.build_circle).
-    - CustomTile('Perangkat Siap Diambil', Icons.check_circle_outline); Menampilkan status akhir bahwa perangkat telah selesai diperbaiki dan siap diambil, menggunakan ikon centang (Icons.check_circle_outline).
 
-4. Penggunaan Widget Custom (CustomTile)
-<br>Untuk menjaga struktur kode tetap rapi dan reusable, setiap item list dibuat menggunakan widget custom bernama CustomTile. Dengan cara ini, desain item tidak perlu ditulis berulang kali. Kita hanya perlu mengirim parameter berupa teks status dan ikon yang ingin ditampilkan. Pendekatan ini membuat kode lebih modular, mudah dibaca, dan lebih mudah dikembangkan apabila tampilan item ingin diubah di kemudian hari.
+* **Tampilan Konten Grid:** Elemen disusun lurus ke bawah di tengah kanvas oleh `Column`. Memuat *icon* utama layanan (dimensi 42), dibatasi dengan ruang `SizedBox` setebal 10 piksel, lalu diakhiri oleh atribut teks nama menu dengan ukuran 18 dan bobot huruf tebal yang seluruhnya dirender menjadi berwarna putih kontras.
 
-#### 4. ListView.builder
-ListView.builder merupakan versi dinamis dari ListView yang digunakan untuk menampilkan daftar data dalam jumlah banyak secara lebih efisien. Berbeda dengan ListView biasa yang menampilkan seluruh item sekaligus, ListView.builder hanya akan me-render item yang sedang terlihat di layar (lazy loading). Karena itu, widget ini sangat cocok digunakan untuk data yang jumlahnya banyak atau bersifat dinamis. Pada kode main.dart, ListView.builder digunakan untuk menampilkan daftar paket layanan IT berdasarkan data dari array layananIT.
+#### 3. Widget ListView
 
-Berikut penjelasan Widget ListView.builder yang digunakan pada main.dart : 
+`ListView` adalah jenis *widget* vertikal (maupun mendatar) yang memiliki kapabilitas memuat kumpulan komponen secara berjejer sekaligus melengkapinya dengan fungsi interaksi *scroll* jika konten meluap ke luar layar. Komponen ini kerap dimanfaatkan dalam desain aplikasi modern untuk menangani menu gulir, linimasa status, hingga rekaman riwayat. Dalam kode bagian ini, tipe `ListView` standar (tanpa builder) diaplikasikan guna memunculkan rentetan indikator tahapan perbaikan secara konstan.
 
-1. Pembatas Tinggi Menggunakan SizedBox
-<br>Widget ListView.builder dibungkus menggunakan SizedBox(height: 260). Tujuannya adalah untuk memberikan batas tinggi yang jelas pada area list. Karena widget ini berada di dalam layout vertikal, maka ListView perlu diberi ukuran tertentu agar tidak terjadi error overflow atau unbounded height. Dengan tinggi sebesar 260 pixel, daftar paket IT dapat di-scroll secara vertikal di dalam area tersebut.
+Rincian implementasinya meliputi:
 
-2. Jumlah Data (itemCount)
-<br>Properti itemCount: layananIT.length digunakan untuk menentukan jumlah item yang akan dibuat. Nilai ini diambil langsung dari panjang array layananIT. Dengan begitu, jumlah item akan otomatis menyesuaikan banyaknya data yang tersedia tanpa perlu ditulis satu per satu secara manual.
+* **Manajemen Batasan Area (SizedBox):** Sangat penting bagi sebuah `ListView` yang tertumpuk secara vertikal untuk dikarantina dimensinya. Oleh karena itu, properti dipagari menggunakan ukuran pasti melalui `SizedBox(height: 180)`. Jika tidak, widget ini bisa menyebabkan kelumpuhan *layout* akibat usahanya memakan layar tanpa henti (*unbounded height constraint*).
+* **Pendekatan Pemanggilan Daftar (children):** Oleh sebab isi baris data bersifat permanen dan volumenya teramat minim, metode memasukkan kode satu-persatu melalui rentetan *array children* diakui jauh lebih efisien dan sederhana dibanding proses pelacakan *index* otomatis.
+* **Arsitektur Daftar Statis:** Baris data dibentuk dalam rupa widget spesifik bertitel `CustomTile`. Di dalamnya terdapat tiga proses tahapan:
+* Titik awal pengecekan: Disimbolkan oleh teks judul "Pengecekan Masalah" bersanding dengan logo `Icons.search`.
+* Titik proses servis: Menampilkan tulisan "Sedang Diperbaiki" bertemankan lambang gir/alat `Icons.build_circle`.
+* Titik tuntas pengerjaan: Mencetak keterangan "Perangkat Siap Diambil" lengkap dengan lencana persetujuan `Icons.check_circle_outline`.
 
-3. Pembuatan Item Secara Dinamis (itemBuilder)
-<br>Properti itemBuilder berfungsi untuk membuat tampilan item secara otomatis melalui proses perulangan (looping). Pada setiap perulangan, Flutter akan menyediakan index yang dimulai dari angka 0. Nilai index ini digunakan untuk mengambil data tertentu dari array layananIT[index].
 
-4. Desain Item Menggunakan Card
-<br>Setiap item list dibungkus menggunakan widget Card agar tampil seperti kartu modern. Properti shape: RoundedRectangleBorder(...) digunakan untuk membuat sudut kartu menjadi melengkung. BorderRadius.circular(16) memberikan radius sudut sebesar 16 pixel, sehingga tampilan card terlihat lebih halus dan elegan.
+* **Penerapan Widget Bantuan (CustomTile):** Alih-alih melakukan *copy-paste* puluhan baris parameter desain untuk tiap komponen menu, penggunaannya diringkas melalui modul `CustomTile`. Strategi ini menjadikan kodingan tidak rentan berantakan dan hanya cukup mem- *parsing* (melemparkan) konfigurasi teks serta gambar saat hendak digunakan.
 
-5. Isi Item Menggunakan ListTile
-<br>Di dalam Card, digunakan widget ListTile yang memudahkan penyusunan layout list menjadi lebih rapi dan terstruktur. Bagian-bagian pada ListTile terdiri dari :
-    - leading (Bagian Kiri); Menggunakan widget CircleAvatar dengan warna latar Colors.indigo. Di dalamnya terdapat angka nomor urut yang diambil dari ${index + 1}. Karena index dimulai dari 0, maka ditambahkan +1 agar nomor yang tampil dimulai dari angka 1.
-    - title (Judul Utama); Menampilkan nama paket layanan dari array layananIT[index]. Teks dibuat lebih menonjol menggunakan fontWeight: FontWeight.bold.
-    - subtitle (Deskripsi Tambahan); menampilkan teks 'Tersedia untuk perorangan & instansi' sebagai informasi tambahan mengenai layanan yang tersedia.
-    - trailing (Bagian Kanan); Menggunakan ikon Icons.arrow_forward_ios dengan ukuran 16, yang memberikan kesan bahwa item tersebut dapat dibuka atau memiliki detail lanjutan.
+#### 4. Widget ListView.builder
 
-#### 5. ListView.separated
-ListView.separated merupakan pengembangan dari ListView.builder yang memiliki fitur tambahan berupa pemisah otomatis antar item. Widget ini sangat cocok digunakan ketika ingin menampilkan daftar data yang memiliki garis pembatas (divider) atau jarak antar item tanpa perlu menambahkannya secara manual di dalam itemBuilder. Pada kode main.dart, ListView.separated digunakan untuk menampilkan detail layanan IT secara dinamis berdasarkan data dari array layananIT, sekaligus menambahkan garis pemisah otomatis di antara setiap item list. 
+Merupakan bentuk penyempurnaan dari format urutan *list* sebelumnya. Nilai jual dari varian versi `builder` ini berfokus di kapabilitas efisiensi alokasi memori melalui fungsi *lazy loading*, sebuah konsep yang membuat program hanya mencetak visual pada layar sesaat setelah area layarnya bergeser atau tersorot pandangan pengguna. Pada tahapan `main.dart` ini, ia digunakan sebagai penampil referensi kumpulan katalog layanan teknologi.
 
-Berikut penjelasan Widget ListView.separated yang digunakan pada main.dart : 
+Rincian implementasinya meliputi:
 
-1. Pembatas Tinggi Menggunakan SizedBox
-<br>Widget ListView.separated dibungkus menggunakan SizedBox(height: 230). Tujuannya adalah untuk memberikan batas tinggi pada area list agar tetap terkontrol di dalam layout halaman. Karena ListView bersifat scrollable, maka perlu diberikan ukuran tinggi yang jelas agar tidak terjadi masalah layout seperti overflow. Dengan tinggi sebesar 230 pixel, daftar layanan dapat di-scroll secara vertikal di dalam area tersebut.
+* **Pengunci Tinggi Area:** Sama seperi pendahulunya, jangkauan geseran area dibendung dalam kandang tinggi mutlak `SizedBox` berjumlah 260.
+* **Kapasitas List (itemCount):** Proses iterasi akan dihentikan secara otomatis ketika panjang siklusnya sudah sinkron dengan volume tampungan elemen struktur `layananIT`.
+* **Perakitan Item Dinamis (itemBuilder):** Modul eksekutor yang melahirkan entitas-entitas daftar di setiap siklus perulangannya. Proses pencetakan data ini mengandalkan variabel `index` untuk membedakan giliran nomor antre elemen apa yang sedang dirender.
+* **Wadah Kartu Latar (Card):** Demi menata visibilitas agar nyaman dilihat, hasil perulangan dilindungi oleh objek `Card`. Desainnya diselaraskan menggunakan parameter `RoundedRectangleBorder` bersudut kelengkungan 16.
+* **Arsitektur Penyusun List (ListTile):** Penempatan komponen antarmuka yang harmonis dieksekusi dengan modul `ListTile`:
+* **Segmen Awal (Leading):** Diisi hiasan `CircleAvatar` bercorak indigo pekat untuk mewadahi cetakan urutan angka, yang dijabarkan lewat perhitungan matematis sederhana `${index + 1}`.
+* **Segmen Utama (Title):** Menyematkan panggilan rekaman string spesifik `layananIT[index]` dengan pemformatan label yang diketik tebal.
+* **Segmen Tambahan (Subtitle):** Berisi kalimat promosional statis dengan cetakan "Tersedia untuk perorangan & instansi".
+* **Segmen Ujung Akhir (Trailing):** Di sela-sela area terjauh pojok list, diapit sebuah logo navigasi mini panah (`Icons.arrow_forward_ios`) untuk memancing sugesti gestur klik bagi penggunanya.
 
-2. Jumlah Data (itemCount)
-<br>Properti itemCount: layananIT.length digunakan untuk menentukan jumlah item yang akan ditampilkan. Jumlah item otomatis mengikuti panjang data dari array layananIT. Dengan cara ini, list dapat bertambah atau berkurang secara dinamis sesuai isi data.
 
-3. Pemisah Antar Item (separatorBuilder)
-<br>Fitur ini adalah fitur yang membedakan Listview.separated dengan ListView.builder. separatorBuilder digunakan untuk membuat widget pemisah di antara item list. Pada kode ini, digunakan widget :
-  ```dart
-  Divider(
-    thickness: 1.2,
-    color: Colors.indigoAccent,
-  )
-  ```
-sehingga setiap item dipisahkan menggunakan garis horizontal berwarna biru aksen (Colors.indigoAccent) dengan ketebalan 1.2 pixel. Dengan adanya separator otomatis, tampilan list menjadi lebih rapi dan mudah dibaca tanpa perlu menambahkan divider secara manual pada setiap item.
 
-4. Pembuatan Item Secara Dinamis (itemBuilder)
-<br>Sama seperti ListView.builder, bagian itemBuilder digunakan untuk membangun item list secara otomatis berdasarkan index data. Flutter akan melakukan looping sesuai jumlah itemCount. Pada setiap perulangan, data layanan diambil dari layananIT[index]
+#### 5. Widget ListView.separated
 
-5. Desain Isi List Menggunakan ListTile
-<br>Setiap item ditampilkan menggunakan widget ListTile agar susunan layout lebih praktis dan terstruktur. Bagian-bagian ListTile terdiri dari:
-    - leading (Bagian Kiri); menggunakan ikon Icons.settings_ethernet dengan warna Colors.indigoAccent. Ikon ini memberikan kesan bahwa item berkaitan dengan layanan jaringan atau teknologi.
-    - title (Judul Utama); Menampilkan nama layanan menggunakan interpolasi string Layanan: ${layananIT[index]}. Teks dibuat sedikit lebih tebal menggunakan fontWeight: FontWeight.w600 agar terlihat lebih jelas dan menonjol.
-    - subtitle (Deskripsi Tambahan); menampilkan teks 'Pengerjaan cepat dan bergaransi' sebagai informasi tambahan mengenai kualitas layanan.
-    - trailing (Bagian Kanan); menggunakan ikon Icons.verified dengan warna hijau (Colors.green) untuk memberikan kesan terpercaya, profesional, dan bergaransi.
+Pengembangan setingkat lebih lanjut dari teknik render berseri ini menambahkan sebuah utilitas spesial, yaitu pembuatan jeda atau batasan antar komponen visual secara mutlak. Pendekatan perancangan semacam ini krusial saat menyusun hierarki menu berisikan baris panjang guna memperjelas pemetaan pembaca tanpa repot memikirkan desain sekatnya secara tunggal. Tujuannya adalah membedah klasifikasi tipe pelayanan sistem IT di menu utama.
 
-#### 6. Stack
-Stack merupakan widget pada Flutter yang digunakan untuk menumpuk beberapa widget dalam satu area yang sama, mirip seperti sistem layer atau tumpukan pada aplikasi desain. Widget pertama yang ditulis di dalam children akan berada di lapisan paling bawah, sedangkan widget berikutnya akan ditampilkan di atasnya. Widget ini sangat cocok digunakan untuk membuat tampilan UI yang saling bertumpuk (overlay) seperti banner promo, badge notifikasi, floating element, maupun desain card modern. Pada kode main.dart, Stack digunakan untuk membuat banner promo servis dengan kombinasi beberapa kotak ikon yang saling menindih dan teks promosi yang ditempatkan secara presisi.
+Rincian implementasinya meliputi:
 
-Berikut penjelasan Widget stack yang digunakan pada main.dart :
+* **Standarisasi Ukuran Penampil:** Blok vertikal dipatenkan ukurannya di batasan maksimal 230 via perpaduan *widget* `SizedBox`.
+* **Mekanisme Jumlah Baris:** *Counter* parameter *looping* ditancapkan persis merujuk data internal koleksi *array* dari variabel `layananIT.length`.
+* **Fasilitas Pembelah Struktur (separatorBuilder):** Ini merupakan poin kelebihan dari kelas `.separated`. Komponen perantara diciptakan menggunakan *widget* `Divider`, membentuk goresan warna menyamping menggunakan rona *indigoAccent* lengkap bersama dimensi ketebalan modifikasi senilai 1.2.
+* **Pembuat Isi List Otomatis:** Perilaku parameternya seratus persen serupa dengan fungsionalitas dari keluarga *builder*, yaitu merender satu item pada indeks putaran data terkini.
+* **Penyelarasan Tampilan via ListTile:**
+* **Leading:** Pada bilik perdana disuntikkan ikonik logo kabel LAN maya (`settings_ethernet`) berdampingan rona yang serasi dengan garis potong pembatas.
+* **Title:** Diolah dari pemanggilan perulangan string berbalut modifikasi tulisan kombinasi "Layanan: [nama item]" melalui pembubuhan tingkat *boldness* `w600`.
+* **Subtitle:** Digunakan memaparkan teks penunjang, berisikan kata "Pengerjaan cepat dan bergaransi".
+* **Trailing:** Ditutup di penghujung daftar memakai lambang validasi (`verified`) berkebangsaan warna hijau demi memberikan jaminan kepercayaan komersial.
 
-1. Container Utama Sebagai Area Stack
-<br>Seluruh elemen Stack dibungkus menggunakan widget Container sebagai area utama. 
-    - height: 180 digunakan untuk menentukan tinggi banner sebesar 180 pixel. 
-    - width: double.infinity membuat lebar container memenuhi area horizontal yang tersedia.
-    - Pada bagian decoration, digunakan color: Colors.indigo.shade100 untuk memberikan warna dasar biru muda. Properti borderRadius: BorderRadius.circular(24) digunakan agar sudut banner terlihat melengkung dan lebih modern.
 
-2. Penggunaan Widget Stack
-<br>Widget Stack memungkinkan setiap elemen ditempatkan pada posisi tertentu menggunakan widget Positioned. Dengan pendekatan ini, setiap komponen dapat diatur koordinatnya secara bebas. Hasilnya, elemen-elemen dapat saling bertumpuk sehingga tampilan menjadi lebih dinamis dan menarik secara visual.
 
-3. Layer Pertama (Kotak Background Utama)
-<br>Widget pertama di dalam children akan menjadi layer paling bawah. Menggunakan :
-  ```dart
-  Positioned(
-    top: 25,
-    left: 25,
-  )
-  ```
-sehingga kotak ditempatkan sejauh 25 pixel dari atas dan kiri container. Di dalamnya terdapat Container berukuran width: 110, height: 110. Warna kotak menggunakan Colors.indigo dengan sudut melengkung (BorderRadius.circular(22)). Pada bagian tengah kotak terdapat ikon Icons.settings_suggest berwarna putih dengan ukuran 50. Kotak ini berfungsi sebagai elemen visual utama pada banner.
+#### 6. Widget Stack
 
-4. Layer Kedua (Kotak Overlay)
-<br>Widget kedua juga menggunakan Positioned, namun dengan posisi berbeda top: 55, left: 95. Posisi ini membuat kotak kedua sedikit bergeser ke kanan bawah sehingga menumpuk sebagian area kotak pertama. Efek overlap inilah yang menjadi ciri utama penggunaan Stack. Kotak kedua memiliki ukuran 110 x 110, warna Colors.lightBlueAccent, sudut melengkung radius 22, serta ikon Icons.speed berwarna putih dengan ukuran 48. Kombinasi warna dan posisi bertumpuk membuat tampilan banner terlihat lebih modern dan interaktif.
+`Stack` adalah komponen krusial pada metode *layouting* di dimensi Flutter jika target estetikanya menyerupai kanvas desain (di mana objek-objek bisa bersilangan tempat/tertumpuk). Aturan penulisannya mengedepankan asas hierarki; baris kode penulisan *widget* awal bakal mendarat sebagai level paling mendasar (dasar permukaan kanvas), sementara yang di- *coding* di urutan belakang berhak merajai tampang depan antarmuka. Metode tersebut diskenariokan menjadi penampil iklan promosi jasa servis berlapis grafik dinamis.
 
-5. Layer Ketiga (Teks Promo)
-<br>Widget terakhir berada pada layer paling atas karena ditulis paling akhir di dalam children. Menggunakan :
-  ```dart
-  Positioned(
-    bottom: 28,
-    right: 24,
-  )
-  ```
-sehingga teks ditempatkan di area kanan bawah banner. Teks yang ditampilkan adalah 'Fast & Reliable'. Teks dibuat lebih menonjol menggunakan fontSize: 26, fontWeight: FontWeight.bold. Warna teks menggunakan Colors.indigo agar tetap selaras dengan tema warna banner.
+Rincian implementasinya meliputi:
+
+* **Fondasi Ruang Layar:** Penempatan modul tumpukan tersebut dideklarasikan ke dalam blok *Container* bervolume lebar utuh selayar penuh (`double.infinity`) bercampur ukuran tegak setinggi 180 piksel. Lapis tembok alas kanvas diberi sapuan warna `indigo.shade100` beraksen tepian halus (radius 24).
+* **Implementasi Widget Stack:** Konsep kerja *widget* mementingkan presisi pengaturan sumbu koordinat. Hal tersebut diaktifkan berkat kolaborasi antarmuka bersama objek pembantu `Positioned` agar *developer* bebas berkreasi dalam menarik komponen ke mana saja.
+* **Elemen Latar Permukaan Dasar (Layer 1):** Komponen didapuk di sekuens kesatu berwujud persegi empat *indigo* di mana sisi pojoknya agak meliuk. Keping ini didorong ke dalam sejauh 25 piksel merujuk tepi atas maupun batas tepian sebelah kiri sistem sumbu koordinat layar asalnya (`top: 25`, `left: 25`). Tengah-tengah dimensinya menyimpan simbol gir bersiluet putih (ukuran 50).
+* **Elemen Lapisan Menengah (Layer 2):** Diselipkan satu blok *container* baru bercorak biru menyala (*light blue accent*) dengan ukuran bidang serupa lapisan pendahulu (110x110). Parameter sumbunya digeser agak menurun menjorok diagonal menjauhi pusat awal (`top: 55`, `left: 95`), otomatis mengarsir area dari bingkai pertamanya sembari menyajikan ornamen logo tipe pemicu kecepatan (speedometer).
+* **Slogan Elemen Tertinggi (Layer 3):** Elemen kalimat mendarat pas di sekuens kode terakhir pada urutan kanvas agar kebal terhadap objek lainnya. Perintah deklarasi `Positioned`-nya mengambil arah berlawanan, menyudut ke titik pojok inferior sebelah kanan layar (`bottom: 28`, `right: 24`). Hal ini dirancang cermat menjamin teks promosi ber- *font* kuat yang mengusung "Fast & Reliable" tak pernah tercaplok, sekalipun aplikasinya dipaksa membesar-kecilkan *layout*.
