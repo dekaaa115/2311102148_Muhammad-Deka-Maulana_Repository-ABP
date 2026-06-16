@@ -29,8 +29,8 @@
 ---
 
 ## LINK GIT
-<a href="https://github.com/">
-    https://github.com/ 
+<a href="https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/tree/792dba5a6fc70aaeee873cfca3a6acaace501ce3/pertemuan-11">
+    https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/tree/792dba5a6fc70aaeee873cfca3a6acaace501ce3/pertemuan-11 
 </a>
 
 ---
@@ -1104,23 +1104,23 @@ class HalamanTentang extends StatelessWidget {
 
 ### Screenshot Output 
 
-![Tampilan Awal](https://github.com/)
+![Tampilan Awal](https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/blob/792dba5a6fc70aaeee873cfca3a6acaace501ce3/pertemuan-11/Screenshot%20Output/tampilan_awal.png)
 
-![Button Klik Saya](https://github.com/)
+![Button Klik Saya](https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/blob/792dba5a6fc70aaeee873cfca3a6acaace501ce3/pertemuan-11/Screenshot%20Output/button-klik-saya.png)
 
-![Memilih Tab](https://github.com/)
+![Memilih Tab](https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/blob/792dba5a6fc70aaeee873cfca3a6acaace501ce3/pertemuan-11/Screenshot%20Output/memilih_tab.png)
 
-![Input Form](https://github.com/)
+![Input Form](https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/blob/792dba5a6fc70aaeee873cfca3a6acaace501ce3/pertemuan-11/Screenshot%20Output/input-form.png)
 
-![Galeri](https://github.com/)
+![Galeri](https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/blob/792dba5a6fc70aaeee873cfca3a6acaace501ce3/pertemuan-11/Screenshot%20Output/galeri.png)
 
-![Pengaturan](https://github.com/)
+![Pengaturan](https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/blob/792dba5a6fc70aaeee873cfca3a6acaace501ce3/pertemuan-11/Screenshot%20Output/pengaturan.png)
 
-![Notifikasi](https://github.com/)
+![Notifikasi](https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/blob/792dba5a6fc70aaeee873cfca3a6acaace501ce3/pertemuan-11/Screenshot%20Output/notifikasi.png)
 
-![Tentang](https://github.com/)
+![Tentang Aplikasi](https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/blob/792dba5a6fc70aaeee873cfca3a6acaace501ce3/pertemuan-11/Screenshot%20Output/tentang-aplikasi.png)
 
-![Tentang Aplikasi](https://github.com/)
+![Tentang](https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/blob/792dba5a6fc70aaeee873cfca3a6acaace501ce3/pertemuan-11/Screenshot%20Output/tentang.png)
 
 ### Pembahasan Fungsionalitas Setiap Widget
 
