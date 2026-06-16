@@ -36,10 +36,10 @@
 ---
 
 ## TUGAS PERTEMUAN 9 MOBILE
-📝 Tugas Praktikum Modul 4-5 Flutter
+Tugas Praktikum Modul 4-5 Flutter
 
 Buat 1 project Flutter yang menampilkan beberapa widget UI berikut:
-<br>🔹 Yang harus ada:
+<br>Yang harus ada:
 <br>Container → kotak berwarna
 <br>GridView → minimal 6 item (grid)
 <br>ListView → 3 item (A, B, C)
@@ -47,7 +47,7 @@ Buat 1 project Flutter yang menampilkan beberapa widget UI berikut:
 <br>ListView.separated → list + garis pembatas
 <br>Stack → tampilan bertumpuk (kotak / text)
 
-📦 Output yang dikumpulkan: Screenshot hasilnya Source code Penjelasan singkat tiap widget
+Output yang dikumpulkan: Screenshot hasilnya Source code Penjelasan singkat tiap widget
 
 ## JAWABAN
 
@@ -385,11 +385,11 @@ class CustomTile extends StatelessWidget {
 ```
 
 ### Screenshot Output 
-![Screenshot Output 1](./pertemuan-9/tugas_praktikum_9/Screenshot_Output/1.png)
+![Screenshot Output 1](https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/blob/c8ddc42c71ead2c73d692a1295b29a0ace3c32d0/pertemuan-9/Screenshot_Output/1.png)
 
-![Screenshot Output 2](./pertemuan-9/tugas_praktikum_9/Screenshot_Output/2.png)
+![Screenshot Output 2](https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/blob/c8ddc42c71ead2c73d692a1295b29a0ace3c32d0/pertemuan-9/Screenshot_Output/2.png)
 
-![Screenshot Output 3](./pertemuan-9/tugas_praktikum_9/Screenshot_Output/3.png)
+![Screenshot Output 3](https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/blob/c8ddc42c71ead2c73d692a1295b29a0ace3c32d0/pertemuan-9/Screenshot_Output/3.png)
 
 ### Penjelasan Setiap Widget
 
