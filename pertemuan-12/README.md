@@ -1,4 +1,3 @@
-```markdown
 <h3 align="center">LAPORAN PRAKTIKUM</h3>
 <h3 align="center">APLIKASI BERBASIS PLATFORM</h3>
 <h3 align="center">Modul 8 & 9</h3>
@@ -123,24 +122,14 @@ Setelah gambar berhasil dimuat, fungsi `showNotification()` dipanggil untuk memb
 
 Berikut adalah hasil implementasi aplikasi pada emulator:
 
-| Tampilan Awal | Mengambil Foto (In-Camera) | Upload & Notifikasi |
-| --- | --- | --- |
-|  |  |  |
+![Tampilan-awal](https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/blob/3beafb962e9049f7df3fd7e50e1bdcf8c57b57a1/pertemuan-12/Screenshot%20Output/tampilan-awal.png)
 
-*(Pastikan file gambar sudah di-upload ke folder `screenshot` di repository GitHub kamu).*
+![Tampilan-kamera](https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/blob/3beafb962e9049f7df3fd7e50e1bdcf8c57b57a1/pertemuan-12/Screenshot%20Output/in-camera.png)
+
+![Hasil-notifikasi](https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/blob/3beafb962e9049f7df3fd7e50e1bdcf8c57b57a1/pertemuan-12/Screenshot%20Output/upload-dan-notifikasi.png)
 
 ---
 
 # Kesimpulan
 
 Praktikum Modul 8 & 9 berhasil diselesaikan dengan mengintegrasikan API Kamera dan Galeri. Implementasi desain *Glassmorphism* memberikan tampilan antarmuka yang modern, responsif, dan menarik, sesuai dengan standar pengembangan aplikasi berbasis platform saat ini.
-
-```
-
-### Langkah Terakhir:
-1.  Buat folder bernama **`screenshot`** di dalam repository GitHub kamu.
-2.  Masukkan 3 file gambar kamu (`in-camera.png`, `tampilan-awal.png`, `upload-dan-notifikasi.png`) ke dalam folder tersebut.
-3.  Ubah `URL_GITHUB_KAMU` di file `.md` tersebut dengan link repo kamu yang asli.
-4.  Commit dan push perubahannya ke GitHub.
-
-```
