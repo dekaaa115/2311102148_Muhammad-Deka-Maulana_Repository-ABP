@@ -1,7 +1,8 @@
 <h3 align="center">LAPORAN PRAKTIKUM</h3>
 <h3 align="center">APLIKASI BERBASIS PLATFORM</h3>
+<h3 align="center">Pertemuan 12</h3>
 <h3 align="center">Modul 8 & 9</h3>
-<h3 align="center">API PERANGKAT KERAS</h3>
+<h3 align="center">NOTIFIKASI & API PERANGKAT KERAS</h3>
 
 <br>
 <p align="center">
@@ -40,6 +41,9 @@ TELKOM UNIVERSITY PURWOKERTO
 </p>
 
 ---
+
+# Soal
+Untuk tugas sendiri kalian baca aja modul 7, dan buat route atau navigasi dari source code yang di kasih kemarin (6 sampai 7 halaman), terus tambahkan notifikasi. Untuk notifikasinya bebas, bisa pas perpindahan halamannya atau pas masukkan datanya.
 
 # Deskripsi Proyek
 Aplikasi **Cyber Capture** adalah aplikasi media capture modern yang menerapkan desain *Glassmorphism* dengan estetika futuristik. Aplikasi ini memanfaatkan API perangkat keras untuk mengambil gambar melalui kamera atau memilih dari galeri, serta mengintegrasikan *Local Notifications* untuk memberikan umpan balik kepada pengguna setelah proses pengambilan gambar berhasil.
