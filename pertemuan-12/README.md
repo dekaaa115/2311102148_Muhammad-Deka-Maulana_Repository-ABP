@@ -5,7 +5,7 @@
 
 <br>
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/id/thumb/e/e0/Telkom_University_Logo.svg/1200px-Telkom_University_Logo.svg.png" width="150"/>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Logo_Telkom_University_potrait.png" alt="Logo" width="300" width="150"/>
 </p>
 <br>
 
@@ -44,7 +44,7 @@ TELKOM UNIVERSITY PURWOKERTO
 # Deskripsi Proyek
 Aplikasi **Cyber Capture** adalah aplikasi media capture modern yang menerapkan desain *Glassmorphism* dengan estetika futuristik. Aplikasi ini memanfaatkan API perangkat keras untuk mengambil gambar melalui kamera atau memilih dari galeri, serta mengintegrasikan *Local Notifications* untuk memberikan umpan balik kepada pengguna setelah proses pengambilan gambar berhasil.
 
-Tautan Repository: [https://github.com/URL_GITHUB_KAMU](https://github.com/URL_GITHUB_KAMU)
+Tautan Repository: [https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/tree/474053816a72f5d77df07f80c0e0786d805e267e/pertemuan-12](https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/tree/474053816a72f5d77df07f80c0e0786d805e267e/pertemuan-12)
 
 ---
 
