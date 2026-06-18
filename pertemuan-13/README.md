@@ -135,13 +135,11 @@ Di dalam fungsi `_incrementCounter()`, pemanggilan `showNotification()` ditambah
 
 Berikut adalah hasil implementasi aplikasi pada emulator:
 
-![Tampilan Awal](./Screenshot%20Output/screenshot1.png)
-![Notifikasi Counter](./Screenshot%20Output/screenshot2.png)
-![Notifikasi Counter](./Screenshot%20Output/screenshot3.png)
+![Tampilan Awal](https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/blob/1031005bf6875f953a959e9b78f25ac66dfe7a31/pertemuan-13/Screenshot%20Output/tampilan-awal.png)
+![Notifikasi Counter](https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/blob/1031005bf6875f953a959e9b78f25ac66dfe7a31/pertemuan-13/Screenshot%20Output/klik-1x.png)
+![Notifikasi Counter](https://github.com/dekaaa115/2311102148_Muhammad-Deka-Maulana_Repository-ABP/blob/1031005bf6875f953a959e9b78f25ac66dfe7a31/pertemuan-13/Screenshot%20Output/klik-2x.png)
 ---
 
 # Kesimpulan
 
 Praktikum Modul 12 & 13 berhasil diselesaikan dengan baik. Implementasi *package* `flutter_local_notifications` dapat berjalan setelah mengatasi *error* kompilasi dengan mengaktifkan fitur `coreLibraryDesugaring` pada Gradle. Hasil akhir menunjukkan aplikasi *counter* yang tidak hanya lebih modern secara visual, tetapi juga interaktif melalui notifikasi sistem *real-time*.
-
-```
